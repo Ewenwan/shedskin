@@ -6,6 +6,28 @@
 Shed Skin
 =========
 
+
+
+实际上告诉你的那个人听的可能是PyPy里的RPython可以被译（Translate）成C，这的确是可行的，而且也是目前唯一可用的Backend。曾经也使用过LLVM作为Backend（Frequently Asked Questions）但似乎没成功过。
+注：RPython不是Python，只是一个子集。
+
+[RPython的GenC源码：https://bitbucket.org/pypy/pypy/src/default/rpython/translator/c/](RPython的GenC源码：https://bitbucket.org/pypy/pypy/src/default/rpython/translator/c/
+)
+
+关于把Python译成C的问题，当然理论上是可行的，但是真要把一门动态解析的语言翻译成一门静态编译的语言，难度颇大。
+
+类似的项目有:
+
+[Py2C](https://github.com/Ewenwan/Py2C)
+
+[shedskin]()
+
+[Cython](https://github.com/cython/cython)
+
+
+
+
+
 Shed Skin is an experimental compiler, that can translate pure, but implicitly statically typed Python (2.4-2.6) programs into optimized C++. It can generate stand-alone programs or extension modules that can be imported and used in larger Python programs.
 
 Besides the typing restriction, programs cannot freely use the Python standard library (although about 25 common modules, such as random and re, are currently supported). Also, not all Python features, such as nested functions and variable numbers of arguments, are supported (see the `documentation <https://shedskin.readthedocs.io/>`_ for details).
