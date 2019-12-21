@@ -1,3 +1,4 @@
+
 .. image:: https://img.shields.io/travis/shedskin/shedskin.svg
     :target: https://travis-ci.org/shedskin/shedskin
 .. image:: http://img.shields.io/badge/benchmarked%20by-asv-green.svg?style=flat
@@ -26,6 +27,15 @@ Shed Skin
 
 
 
+## 优化Python程序执行效率的工具？
+
+### Psyco:
+
+是一个PVM的增强工具，这个工具收集并使用信息，在程序运行时，可以将部分程序的字节码转换成底层的真正的二进制机器代码，从而实现更快的执行速度。在理想的情况下，一些通过Pysco优化的Python代码的执行速度可以像编译好的C代码一样快。所有Pysco往往被看做是一个即时编译器(JIT)。
+
+### Shedskin C++转换器:
+
+Shedskin是一个引擎系统，它尝试将Python代码变为C++代码，然后使用机器中的C++编译器将得到的C++代码编译为机器代码。
 
 
 Shed Skin is an experimental compiler, that can translate pure, but implicitly statically typed Python (2.4-2.6) programs into optimized C++. It can generate stand-alone programs or extension modules that can be imported and used in larger Python programs.
